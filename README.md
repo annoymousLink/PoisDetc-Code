@@ -26,13 +26,20 @@ Meta info: if you are testing it on your own model, please specify the correct m
 # Detection 
 To understand the performance of PoisDetc on model with single infected labels. Just execute:
 ```bash
-python 
+python detect_run.py
 ```
-or 
+You can switch different types infected model (AP or BP) to test PoisDetc through changing "model" variable in the detect_run.py file, like Changing:
+```bash
+  model = setup.model_tf(restore='DM/demo_model_b',
+                                   session=sess)
+
 ```
-python 
+to 
+```bash
+  model = setup.model_tf(restore='DM/demo_model_p',
+                                   session=sess)
+
 ```
-which using our method to test two infected models (infected by adversarial poisoning and backdoor)
 
 The results is like below:
 
