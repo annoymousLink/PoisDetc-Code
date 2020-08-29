@@ -53,6 +53,10 @@ again.
 The results is like below:
 
 ```bash
+On Labe:0 || 10 Shots Detection || Loss Results: [0.00266673 0.02825947 0.01446394 0.0382086  0.52626806 0.0225951
+0.00342378 0.00749703 0.00423891 0.00645078] || 
+Prob of Reaching Poisoned Region Samples :0.9 Under Treshold Value:0.2
+****************************************
 BIG BANG: Infected Label :0 Detected
  On Labe:1 || 10 Shots Detection || Loss Results: [ 3.2156274   0.81431085  0.7940536   0.7660262   1.4209422  42.576817
   0.27247506  0.5878277   0.5463749   1.6239564 ] || 
