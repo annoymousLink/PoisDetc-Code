@@ -56,7 +56,7 @@ python detect_run.py
 ```
 again.
 
-The results(10 shots)are like below(Notably, all such results in our experiments, we run it 10 times to get its average value):
+The results(10 shots)are like below(Notably, all such results in our experiments, we run it 10 or 20 times and present its average value):
 
 ```bash
 On Labe:0 || 10 Shots Detection || Loss Results: [0.00266673 0.02825947 0.01446394 0.0382086  0.52626806 0.0225951
