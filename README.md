@@ -99,7 +99,15 @@ Just run
 The results like below
 
 ```bash
+
+############################# Before Mitigation:
+
+Attack Success Rate:0.9633333333333334
+########################### After Mitigation
+Attack Success Rate:0.020999999999999998
 ```
+
+As seen in the results, before our mitigation process, Attack success rate is 0.9633333333333334, after mitigation, our attack success rate is 0.020999999999999998!!!
 
 # In the future
 In u feel interested in our work, please feel free to create an issue in this repo or contact me. We are glad to assist you to debug your experiment and seek the correct configuration for ur project.
