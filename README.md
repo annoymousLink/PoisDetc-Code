@@ -37,7 +37,7 @@ To understand the performance of PoisDetc on BP affected model with a single inf
 ```bash
 python detect_run.py
 ```
-or u can switch to model affected by AP attack through chaning to 
+or u can switch to model affected by AP attack through adjusting model variable:
 ```
     model = setup.model_tf(restore='DM/demo_model_p',
                                    session=sess)
