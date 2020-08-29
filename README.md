@@ -7,6 +7,8 @@ We appreciate your interest in PoisDetc and playing our code. Like our paper, ou
 
 Regarding Mitigation, as our paper shows, mitigation requires part of clean data (a little large), thus we provide the mitigation code on https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing for you to play. 
 
+
+
 The detailed instructions are shown below.
 
 # DEPENDENCIES 
@@ -37,7 +39,9 @@ input size,
 preprocessing method, 
 class numbers
 ```
+# Results in the Paper 
 
+For each result claim in this paper, we run experiments 10 or 20 times, and get their average value to present.
 # Detection 
 To understand the performance of PoisDetc on BP affected model with a single infected label. Just execute:
 ```bash
