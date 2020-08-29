@@ -33,11 +33,11 @@ Meta info: if you are testing it on your own model, please specify the correct m
 
 
 # Detection 
-To understand the performance of PoisDetc on model with single infected labels. Just execute:
+To understand the performance of PoisDetc on BP affected model with a single infected label. Just execute:
 ```bash
 python detect_run.py
 ```
-or switch to model affected by AP attack through chaning to 
+or u can switch to model affected by AP attack through chaning to 
 ```
     model = setup.model_tf(restore='DM/demo_model_p',
                                    session=sess)
@@ -75,7 +75,19 @@ BIG BANG: Infected Label :0 Detected
 
 We can see this model is infected with label 0 Prob=0.8(>0.5) and other Prob for other label all <0.5, according to the results.
 
-Also we test PoisDetc on model with multiple infected labels. The result is like below：
+Also we test PoisDetc on model with multiple infected labels through adjusting model variable:
+
+```bash
+    model = setup.model_tf(restore='DM/model_multi',
+                                   session=sess)
+```
+
+Then run :
+```bash
+python detect_run.py
+```
+
+The result is like below：
 ```bash
 ****************************************
 BIG BANG: Infected Label :0 Detected
