@@ -98,10 +98,11 @@ Also we test PoisDetc on model with multiple infected label
 
 #Mitigation
 
-To investigate the mitigation performance of PoisDetc
-Just run
+To investigate the mitigation performance of PoisDetc, we provide the link https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing to access. After download mitigation codes, access and run: 
 
 ```bash
+
+python miti_run.py
 
 ```
 
