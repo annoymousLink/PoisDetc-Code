@@ -32,7 +32,7 @@ or
 ```
 python 
 ```
-which using our method to test two infected models (adversarial poisoning and backdoor)
+which using our method to test two infected models (infected by adversarial poisoning and backdoor)
 
 The results is like below:
 
