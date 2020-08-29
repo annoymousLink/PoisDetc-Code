@@ -1,4 +1,13 @@
-# PoisDetc-Code
+# Code for: PoisDetc: A Practical Detection and MitigationTool for Poisoned Deep Neural Networks 
+
+
+# BEFORE YOU RUN THIS CODE
+
+We appreciate your interest in PoisDetc and playing our code. Like our paper, our code contains 2 parts: I) Detection II) Mitigation. For Detection Part, we show PoisDetc on model with single infected label and model with multiple infected label by providing the instruction and results.
+
+Regarding Mitigation, as our paper shows, mitigation requires part of clean data (a little large), thus we provide the mitigation code on https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing for you to play. 
+
+The detailed instruction are shown below.
 
 # DEPENDENCIES 
 
@@ -26,20 +35,13 @@ Meta info: if you are testing it on your own model, please specify the correct m
 # Detection 
 To understand the performance of PoisDetc on model with single infected labels. Just execute:
 ```bash
-python detect_run.py
+python 
 ```
-You can switch different types infected model (AP or BP) to test PoisDetc through changing "model" variable in the detect_run.py file, like Changing:
-```bash
-  model = setup.model_tf(restore='DM/demo_model_b',
-                                   session=sess)
-
+or 
 ```
-to 
-```bash
-  model = setup.model_tf(restore='DM/demo_model_p',
-                                   session=sess)
-
+python 
 ```
+which using our method to test two infected models (adversarial poisoning and backdoor)
 
 The results is like below:
 
@@ -94,28 +96,21 @@ Also we test PoisDetc on model with multiple infected label
 ```
 
 
-# Mitigation
+#Mitigation
 
-To investigate the mitigation performance of PoisDetc:
-We are sorry the whole mititgation process is too large to upload, thus we give the google drive link https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing , if you feel interested can download it, access the dictionary and run:
-
+To investigate the mitigation performance of PoisDetc
+Just run
 
 ```bash
-python miti_run.py
+
 ```
 
 The results like below
 
 ```bash
 
-############################# Before Mitigation:
 
-Attack Success Rate:0.9633333333333334
-########################### After Mitigation
-Attack Success Rate:0.020999999999999998
 ```
-
-As seen in the results, before our mitigation process, Attack success rate is 0.9633333333333334, after mitigation, our attack success rate is 0.020999999999999998!!!
 
 # In the future
 In u feel interested in our work, please feel free to create an issue in this repo or contact me. We are glad to assist you to debug your experiment and seek the correct configuration for ur project.
