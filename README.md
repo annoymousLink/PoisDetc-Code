@@ -87,7 +87,7 @@ Also we test PoisDetc on model with multiple infected label
 ```
 
 
-#Mitigation
+# Mitigation
 
 To investigate the mitigation performance of PoisDetc:
 We are sorry the whole mititgation process is too large to upload, thus we give the google drive link https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing , who feel interested can download it and run:
