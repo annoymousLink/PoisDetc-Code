@@ -35,13 +35,20 @@ Meta info: if you are testing it on your own model, please specify the correct m
 # Detection 
 To understand the performance of PoisDetc on model with single infected labels. Just execute:
 ```bash
-python 
+python detect_run.py
 ```
-or 
+or switch to model affected by AP attack through chaning to 
 ```
-python 
+    model = setup.model_tf(restore='DM/demo_model_p',
+                                   session=sess)
 ```
-which using our method to test two infected models (adversarial poisoning and backdoor)
+in the detect_run.py file.
+
+Then run 
+```bash
+python detect_run.py
+```
+again.
 
 The results is like below:
 
@@ -143,7 +150,7 @@ BIG BANG: Infected Label :41 Detected
 BIG BANG: Infected Label :42 Detected
 ****************************************
 ```
-We can see PoisDetc can still be effective on multi-label detection scenarios.
+We can see PoisDetc can still be effective on multi-label detection scenarios. Successfully detect all (43) infected labels!!!
 
 #Mitigation
 
@@ -159,9 +166,13 @@ The results like below
 
 ```bash
 
+############################# Before Mitigation:
 
+Attack Success Rate:0.9633333333333334
+########################### After Mitigation
+Attack Success Rate:0.020666666666666667
 ```
-
+As seen in the result, before mitigation, the attack success rate is around 96%, while after mitigation, the attack success rate drop to around 2.07%!!!
 # In the future
 In u feel interested in our work, please feel free to create an issue in this repo or contact me. We are glad to assist you to debug your experiment and seek the correct configuration for ur project.
 
