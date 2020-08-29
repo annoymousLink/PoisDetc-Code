@@ -3,15 +3,16 @@
 
 # BEFORE YOU RUN THIS CODE
 
-We appreciate your interest in PoisDetc and playing our code. Like our paper, our code contains 2 parts: I) Detection II) Mitigation. For Detection Part, we show PoisDetc on model with single infected label and model with multiple infected label by providing the instruction and results.
+We appreciate your interest in PoisDetc and playing our code. Like our paper, our code contains 2 parts: I) Detection II) Mitigation. For Detection Part, we show PoisDetc on detecting model with single infected label and model with multiple infected labels.
 
 Regarding Mitigation, as our paper shows, mitigation requires part of clean data (a little large), thus we provide the mitigation code on https://drive.google.com/file/d/1Jn-p6A0QYDAbIeJBfzEefgrYgbWyFt5v/view?usp=sharing for you to play. 
 
-The detailed instruction are shown below.
+The detailed instructions are shown below.
 
 # DEPENDENCIES 
 
-Our code is implemented and tested on Keras with TensorFlow backend. Following packages are used by our code.
+Our code is implemented and tested on Keras with TensorFlow backend. 
+Following packages are used by our code.
 
 ```bash
 keras==2.2.4
@@ -20,7 +21,7 @@ tensorflow-gpu==1.10.1
 
 Our code is tested on Python 3.6.8
 ```
-We include a sample script demonstrating how to perform the reverse engineering technique on an infected model. There are several parameters that need to be modified before running the code, which could be modified here.
+We include a sample script demonstrating how to perform PoisDetc on an infected model. There are several parameters that need to be modified before running the code, which could be modified here.
 
 On GPU device: 
 if you are using GPU, specify which GPU you would like to use by setting the DEVICE variable via
@@ -29,20 +30,25 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 ```
 
 If you want to test the code on your own models, please specify the path to the model and model2 these 2 variables.
-Meta info: if you are testing it on your own model, please specify the correct meta information about the task, including input size, preprocessing method, class numbers.
 
+Meta info: if you are testing it on your own model, please specify the correct meta information about the task, including:
+```bash
+input size, 
+preprocessing method, 
+class numbers
+```
 
 # Detection 
 To understand the performance of PoisDetc on BP affected model with a single infected label. Just execute:
 ```bash
 python detect_run.py
 ```
-or u can switch to model affected by AP attack through adjusting model variable:
+or u can test PoisDetc on AP-affected model through adjusting model variable:
 ```
     model = setup.model_tf(restore='DM/demo_model_p',
                                    session=sess)
 ```
-in the detect_run.py file.
+which is in the detect_run.py file.
 
 Then run 
 ```bash
@@ -50,7 +56,7 @@ python detect_run.py
 ```
 again.
 
-The results is like below:
+The results(10 shots)are like below:
 
 ```bash
 On Labe:0 || 10 Shots Detection || Loss Results: [0.00266673 0.02825947 0.01446394 0.0382086  0.52626806 0.0225951
@@ -77,9 +83,9 @@ BIG BANG: Infected Label :0 Detected
 
 ```
 
-We can see this model is infected with label 0 Prob=0.8(>0.5) and other Prob for other label all <0.5, according to the results.
+We can see this model is infected with label 0 Prob=0.9(>0.5) and Prob for other label all <0.5.
 
-Also we test PoisDetc on model with multiple infected labels through adjusting model variable:
+Also we test PoisDetc on model which has multiple infected labels through adjusting model variable:
 
 ```bash
     model = setup.model_tf(restore='DM/model_multi',
@@ -91,7 +97,7 @@ Then run :
 python detect_run.py
 ```
 
-The result is like below：
+The results are like below：
 ```bash
 ****************************************
 BIG BANG: Infected Label :0 Detected
@@ -166,7 +172,7 @@ BIG BANG: Infected Label :41 Detected
 BIG BANG: Infected Label :42 Detected
 ****************************************
 ```
-We can see PoisDetc can still be effective on multi-label detection scenarios. Successfully detect all (43) infected labels!!!
+We can see PoisDetc can still be effective on multi-label detection scenarios. Successfully detect infected model (labels)!!!
 
 #Mitigation
 
