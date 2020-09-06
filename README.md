@@ -41,7 +41,7 @@ class numbers
 ```
 # Results in the Paper 
 
-For each result claim in this paper, we run experiments 10 or 20 times, and get their average value to present.
+For each result claimed in this paper, we run experiments 10 or 20 times, and using their average value to present.
 # Detection (Resutls through crafting 10 points for detection)
 To understand the performance of PoisDetc on BP affected model with a single infected label. Just execute:
 ```bash
