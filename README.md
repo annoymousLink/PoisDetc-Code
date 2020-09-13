@@ -33,11 +33,12 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 If you want to test the code on your own models, please specify the path to the model and model2 these 2 variables.
 
-Meta info: if you are testing it on your own model, please specify the correct meta information about the task, including:
+Meta info: if you are testing it on your own model, please specify the correct information about the task, including:
 ```bash
 input size, 
 preprocessing method, 
 class numbers
+model structure(the softmax layer)
 ```
 # Results in the Paper 
 
